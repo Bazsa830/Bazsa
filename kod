@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Videó</title>
+  <style>
+    * { box-sizing: border-box; }
 
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    video {
+      width: min(100vw, 56.25dvh);
+      height: 100dvh;
+      object-fit: cover;
+      background: black;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted playsinline loop>
+    <source src="./vegleges.mp4" type="video/mp4">
+    A böngésződ nem tudja lejátszani a videót.
+  </video>
+</body>
+</html>
