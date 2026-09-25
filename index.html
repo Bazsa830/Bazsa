@@ -2,7 +2,8 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
   <title>Videó</title>
   <style>
     * { box-sizing: border-box; }
@@ -10,28 +11,33 @@
     html, body {
       margin: 0;
       width: 100%;
-      height: 100%;
-      background: black;
+      min-height: 100%;
+      background: #000;
     }
 
     body {
       display: flex;
       justify-content: center;
       align-items: center;
+      min-height: 100vh;
+      min-height: 100dvh;
     }
 
     video {
+      display: block;
+      width: min(100vw, 56.25vh);
       width: min(100vw, 56.25dvh);
+      height: 100vh;
       height: 100dvh;
-      object-fit: cover;
-      background: black;
+      object-fit: contain;
+      background: #000;
     }
   </style>
 </head>
 <body>
-  <video autoplay muted playsinline loop>
+  <video controls playsinline preload="metadata" aria-label="Videólejátszó">
     <source src="./vegleges.mp4" type="video/mp4">
-    A böngésződ nem tudja lejátszani a videót.
+    A böngésződ nem támogatja a videólejátszást.
   </video>
 </body>
 </html>
